@@ -1,0 +1,99 @@
+
+README file of Scrapy project for douban_movie
+------------------------------------------------------------------
+
+Before you crawl anything, you need to make sure some packages installed.
+You can check it by typing the following in your terminal:
+
+>> pip install scrapy faker selenium
+
+
+If there is no ‘data’ file, please make the directory which will store 
+the json file you crawl from the internet:
+
+>> mkdir data
+
+
+Then, you need to run the Scrapy project at the ‘bin’ directory:
+
+>> cd bin
+
+And, you have to download and unzip the phantomjs packages at the ‘bin’ directory:
+
+>> wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+
+>> tar  -jxvf phantomjs-2.1.1-linux-x86_64.tar.bz2
+
+Finally, we can crawl now! 
+You can check all the spiders by typing the command:
+
+>> scraps list
+
+==============================================================
+
+STEP 1: Crawl for movie_item:
+
+Just run:
+
+>> scraps crawl douban-movie
+
+# 内含我的豆瓣账号和密码，懒得改了～ 请保密。。。。
+
+==============================================================
+
+STEP 2: Crawl for movie_comment
+
+Just run the following command one by one:
+
+>> scrapy crawl douban-comment20 -a pages=1000
+>> scrapy crawl douban-comment40 -a pages=1000
+>> scrapy crawl douban-comment60 -a pages=1000
+>> scrapy crawl douban-comment80 -a pages=1000
+>> scrapy crawl douban-comment100 -a pages=1000
+>> scrapy crawl douban-comment120 -a pages=1000
+>> scrapy crawl douban-comment140 -a pages=1000
+>> scrapy crawl douban-comment160 -a pages=1000
+>> scrapy crawl douban-comment180 -a pages=1000
+>> scrapy crawl douban-comment200 -a pages=1000
+>> scrapy crawl douban-comment220 -a pages=1000
+>> scrapy crawl douban-comment225 -a pages=1000
+>> scrapy crawl douban-comment250 -a pages=1000
+
+in which we have split the 250 movies into 13 parts to crawl and specify 
+the pages as parameter (1000 by defalt).
+
+(HIGH LEVEL!)
+Actually, you can crawl all the douban-comment spiders at once! 
+But also you would be banned at once! So you can crawl every two spiders
+for douban-comment by running the command.
+
+>> scraps crawlallcomment
+
+and modify the file in ./douban_movie/commands/crawlallcomment.py
+==============================================================
+
+STEP 3: Crawl for movie_people
+
+Just run the following command one by one:
+
+>> scrapy crawl douban-people5000 
+>> scrapy crawl douban-people10000
+>> scrapy crawl douban-people15000
+>> scrapy crawl douban-people20000
+>> scrapy crawl douban-people25000
+>> scrapy crawl douban-people30000
+>> scrapy crawl douban-people35000
+>> scrapy crawl douban-people40000
+
+in which we have split the 35776 peoples into 8 parts to crawl.
+
+(HIGH LEVEL!)
+Likewise, you also can crawl all the douban-people spiders at once by typing:
+
+>> scraps crawlallpeople
+
+However you would be banned without doubt! 
+You can modify the file in ./douban_movie/commands/crawlallpeople.py
+
+
+

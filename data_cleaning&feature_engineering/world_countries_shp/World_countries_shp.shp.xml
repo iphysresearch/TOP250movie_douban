@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!--<!DOCTYPE metadata SYSTEM "http://www.esri.com/metadata/esriprof80.dtd">-->
+<metadata xml:lang="en"><Esri><MetaID>{7BF31F4C-0ACE-4D07-A747-9F6A8485CB3A}</MetaID><CreaDate>20110324</CreaDate><CreaTime>14020800</CreaTime><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\RepairGeometry" Date="20110324" Time="140208">RepairGeometry World_countries_shp DELETE_NULL World_countries_shp</Process></lineage></DataProperties></Esri></metadata>
