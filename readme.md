@@ -891,6 +891,9 @@ def preprocess_text(content_lines,sentences,category):
         except:
             print(line)
             continue
+
+data_com_X_1 = data_com_X[data_com_X.label == 1]
+data_com_X_0 = data_com_X[data_com_X.label == 0]	    
             
 # 下采样
 sentences=[]
