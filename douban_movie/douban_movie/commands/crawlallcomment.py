@@ -33,7 +33,7 @@ class Command(ScrapyCommand):
         spider_loader = self.crawler_process.spider_loader
         for spidername in args or spider_loader.list():
             #if 'comment' in spidername:       # 只并行爬取comment
-            if (spidername == 'douban-comment225') or (spidername == 'douban-comment250'):
+            if spidername in ['douban-comment225', 'douban-comment250']:
                 print("*********cralall spidername************" + spidername)
                 self.crawler_process.crawl(spidername, **opts.spargs)
 
