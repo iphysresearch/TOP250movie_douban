@@ -1,0 +1,140 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/zh/editor.html?c=radar&renderer=svg&code=PYBwLglsB2AEC8sDeAoWtJgDYFMBcya6GOAHmAQOQBCAhgM4QDGsASrQCa0BOsAwgAseYSkQC-AGiJgyYAMpgAnrgKpisJsCzBuVAMQAGI8cpT1AMxhgAYrQC2ELIqqBFvMDK8qaLpL0eRABe-LCUABwAdADsIKSi6JJEuADmONAcql6wXGC0BADalACCWNpMtDIcsNQArhzJIhLBBUxgVbRYsHIgKRwQ0ImUALriZhjAWpAg6epg3BCJybrB0PY4nuognD19eQBMBg0AjPuwe4cGAyPeOnZlMouUSLRisAA8APQARtwAfEgfYngkEwxABSWKweLobicHhTYhvN6wehCLpUJgQbhMXBrYi9HqlMA6PIZdBIWDLOxBSiAaSNAFzmplgN1IBAOEMuxDJFKpgHe5QA8FgymSy2STkOSVlRAGiagCHIgW0ZmwVmQ9SirlUQCsroADG1l8sV7NJYspVEA8jqAVT1tUKlepOeLgoBjyMAgKnmhXC5Uqm2UTU7J26kXWw3BU0AFgAzN6Xcq_VSHYGw2IMhcMnKIPQADK0D44LBw9TI4AAdwI5ja9BwetgAggHBwAHkAG44bhYWiTDDcKqlkW5vMAWV6aYzWdgRawJbLlm4NzAdzw5iq0GaUDgAApa212w08WQAJSEV3qbg4FrcOCrrDtgBURwMsAA1MEwQBuEVx9SWpEgLAQMAFA85XfKrtC2LHAMhfcMS1mHB6GJK0RVVYJqlqQ9YFreh326Xp-jLJRUWCaEuG4HF1C_HA7AUZQgjUPdoGuNpsz3BENC0IlyRwPNYBwJghG4MB6DCRJoRACsmDCFNehwHgAHF8IgFIwCXY5FMOBpchFdRGP1YBzHMEsKFgY5NG0e49AiABRAARahrHMyhwz3WANNFLSdMPFkGkMljKD0YMDgANgATiYCJbLA-zGITez0CbAd6PswDW3XNTlRAYBGEgGAqEJEAiMi8dJ2nIc5wXGAlw2aE7HoLcqMi4gDyPOAyvsPjTwvK8b0oMEktfMtXQ84zjBMHrlR8Gx7EcZxgncHL7JGuQAipcIohiLriBW0LlXWuIyyyP9VPs6q9xaoJcgMMIAFYGlO3zLrCEIboiG67v0877sex6Isi-DCmaVp2k6DC-k8FbP2gHByJUf8asYwA-6MAO39AH6_QBDc0AELd6CUXBAElvFb0Boic6MhmqmKM_QjF8gL_IZRjAAyjeGkcAHIzACcgvBACK_BnseIPNKzAAQCGDdnNo2pKBaGV8iCGMQHyAA
+	请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+    <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+    <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+    <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+    <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+    <script type="text/javascript">
+      var dom = document.getElementById('container')
+      var myChart = echarts.init(dom, null, {
+        renderer: 'svg',
+        useDirtyRect: false
+      })
+      var app = {}
+
+      var option
+
+      option = {
+        title: {
+          text: 'Basic Radar Chart'
+        },
+        textStyle: {
+          color: '#000000',
+          fontFamily: '黑体',
+          fontSize: '8.7px'
+        },
+        legend: {
+          data: ['Allocated Budget', 'Actual Spending']
+        },
+        tooltip: {
+          trigger: 'name',
+          padding: [20, 10, 20, 10],
+          formatter: '{a} </br>{b}:{c}%'
+        },
+        radar: {
+          // shape: 'circle',
+          indicator: [
+            { name: '导演创作', max: 1 },
+            { name: '演员表现', max: 1 },
+            { name: '影视题材', max: 1 },
+            { name: '拍摄阶段', max: 1 },
+            { name: '后期制作', max: 1 }
+          ],
+          axisLabel: {
+            show: false,
+            hideOverlap: true,
+            showMinLabel: false,
+            formatter: function (value, index) {
+              return value * 100 + '%'
+            }
+          },
+          splitArea: {
+            show: false
+          }
+        },
+        series: [
+          {
+            name: 'Budget vs spending',
+            type: 'radar',
+            areaStyle: {},
+            itemStyle: {
+              normal: {
+                // color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                //   { offset: 0, color: '#7EDBFD' },
+                //   { offset: 1, color: '#3169c7' }
+                // ],
+                label: {
+                  show: true,
+                  position: 'top',
+                  formatter: function (params) {
+                    return params.value * 100 + '%'
+                  },
+                  color: '#000000',
+                  fontFamily: '黑体',
+                  fontSize: '8.7px'
+                }
+              }
+            },
+            data: [
+              {
+                value: [0.101, 0.327, 0.285, 0.084, 0.203],
+                name: 'Actual Spending',
+
+                lineStyle: {
+                  // 设置线条的style等
+                  normal: {
+                    color: '#006699', // 折线线条颜色:红色
+                    width: 3
+                  }
+                }
+              },
+              {
+                value: [0.583, 0.377, 0.554, 0.481, 0.497],
+                name: 'Actual Spending',
+
+                lineStyle: {
+                  // 设置线条的style等
+                  normal: {
+                    // color: 'yellow', // 折线线条颜色:红色
+                    width: 3
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+
+      if (option && typeof option === 'object') {
+        myChart.setOption(option)
+      }
+
+      window.addEventListener('resize', myChart.resize)
+    </script>
+  </body>
+</html>
