@@ -1,0 +1,366 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/zh/editor.html?c=bubble-gradient&code=MYewdgzgLgBAJgQygmBeGBtAUDTGAMAdPgEwA0MRAjBTAMz60Dkg3AmCJ8UxaxwLo9k48RfADYKRETRhV8dLoCCgwPKanGEyVM-A3BgLEArOMIB2CpOaBpI0CrNiqZWN_QTuEAWQ0YActZ-VxNAY37yNgH2WkKEVFISAJwUVCIxqoDmSoCjBjYpIY66-AlERlJGCaqA2EqA8IY2pRnaupGEzibSIoy-iYA05mltmpnUcpSEIvUkzq6-gDHGgOXGgL8BgNlKNuPTlWFUObWe9HHMgPlKM1xbC07hPrkJJPirqoBzGYA8FjZXe1k1HhQkPUyAR2qA-Gk2H3fCBr31RjEqkAwDGAMr0bGCfsQehIfN4uIAudUARuk2ZEZHgAbiwIAADlAAJbgNAwADeggARghgABrADmACcQABXMBwADCIAANiB6QAuGBgACmAHcYILgAALBD0qAQQgMhA4iX44CEABKCDg-IQnIA4vTNfjBWAoAAKIgwwiW1bYXC4Ml2u0gABmzoggqg_MYgkdoG5fNUAGJnUZne5nQgmD6YABfUL26O4F1uj38miJmB-nn8piB4BwOD4OB6KOOmOCHgASlCBKgnMF_IddoA9M2YFBBQAPT2qAAy-OdgpgAFFOzjxcgwMAAJ4wBCsmC6gAiAAUYOTZxyWVB6dPONH686e0w9ABSfeOqC4nN0c-COOCeu041wRvR-n42kS48yc_x9vXqot4XnaiDIPyGDcDY6hkLY1hcMEsHpFwFRIW0XBzNsFzXDAsHfFwkKwWiMA8PeoQMvir6kgegpHjm7h_tGV44jmv6lrGoSdgAgp2-IQG-joQDinL4lA_ZCgJjowCJQoAMpQNO9aSVJ7bTuOOaIBAEqCnA7FltG5a4A-uDTjxfHKTAQkiWJ-ISdRKkyYK8mKQ29kqap6mqJp2m6Rmhl2sZdoQMAOquTuTKCmRgjuh-gr8Zg0ZNo6YAIAAtq5UH_rgYEIPyOUEA4KkKZ5TDBUgHb0iBgnTql5JcrJ-IAF6uc6LLAASRKmjllZuSp9Ieky9JgPASAIBgJA8DAbZ6FiKmBY6gqpUqCAQOZvVSc6IDAEy8WlYKsUQFVUmcgg5KCpyFkqVpIDCvy4WCllG08ql5X7fyrVTh1w2mji0ppT1SXubg_VQINw2_QaqWEPlE2zUDHEZo6OIgKtX05sxelSf5ZaPaJi3OUp62CVKcA3QAQpyg1pt6QNaZqN0cv6Ob0rSlKmlQJwUHQQJ6E0RB6JWR3E_TwoAPKuu6UAAJr8gYiOZly2ZBqcdDc8OmNGQZ_6A7gKXpTmMEZjleWjRgVCFVJxUZWVUAVULlk1XVnINc171tV9MBdaNAPyyDYMjcg42TdNcM4xmi3Lat8U63am3bbtMVGodj24CdZ0XUTUnXbd7b0hFKex89r0Bh97WEt9EP_ZnfUDUNMCV1D-V0Ji8tGQXuDI6j5fo7iGsBX5uMdqlBOuTHuB06TwoU1T0g0-5E8M4rAZMCzbMkH8MhNFQvOGAL9vjyTN3iym0uywXWbL4GMh6GyXHOH32MI46Md6xldiPcbAdjRNj1WzmNt20ehAR29UmotXduXT23Vq4wD9nXGGwcYAzQHuHJaUoo6XULvHf--0k772kqdc6mDiY3TunnB6rcYCbXpC9W2b0qEQM6g3H28M7RwPBn9Ruptm6h3cvNdyndRLd1UBjeWj824ZjxsPBShMx6WUPlPSmAYZAFwXsKRmSsV6swQKadesR8Bbx3r0PeqiFHH0ljLJB58l45kDHQdwRhhxsnwA_LWiUMyvxzIhI2o0TaB2br_NS1sQp0MqkAkBzswFu0-pAr2yAWHuXYV_IOU0kG8IkSpCO6C1pyLjjtHBB18FpyITAg-pDc750odQ2hFVollyYZwhJrCkkN2htwlurD-EqUEWjERvcxEoJUlIkexD5Ei2nsoueV0FEaOXqvHRejZ6GL5oQEx8s1HmI9JYuWQML62JEO4LibIlwlj8m45-Hi0oZWQj48CyTnAW0vEE_-ITAEZmAbVUBrsGExM6tAseSSEGpOQXNR6WSVo5PlnkhOuC4pFMIRnORZSc73XblQouoS6kex-o00pbDa4cMhm0_xHT4ZdKkj04RTBRFA3EU_KSwyZGj3WQoiZ1NTEi1mczbR7NOb0B5istZtMzESy2WfeWeygxcSOQAMWHKcua5y7QvyuTmVCtzcrJL0I8u0f9VAAP2vbD5TsXbgN-d9f5iNAWmwmsC9J9KFpoIhdHKFW18n6thcneWxTEWUOzmQyprDqnFyxbE5heLgYEvrpw4lY0eGUPJUjFGQjwA9xxH3TWoLJFDxGTAtRbLZ4csnly1Q8zdEbwMbEIx_NBZFqPqK0-ViJU2KDEuEgw46AyroK4sOFyVKeNUJhe2n98oiB1bgPVpVXmGvCZ8yJ3zS7YstYkqNQKQ6DKkuCjBMDoUFLwQXH1ozkUBooUGjFtSfn1IrripF-LQZ11aU3UltK0WUtTX09NAys1DJzUy0Z-alHspZZyltWi14VuWbvWtwHJ6bMbTs9ykrcwkBIDK1DJAe0BW1pc_WSR0Iar8WNIw46PLBOLkaiJprQ1_O9tXa1gdbXru_Zup127cluphYUg9CKj3yPKaiqp576GLrDTeyhkb72ErSrGjA8bOmvuTb06l_TaUbsdIyly_7WWAcLTBxeTNS08sWZvKtgroPCpFnB7Z1iDO5ioHQNkUQ0OYYycqnDGUh0f18ck9wJHJ0GrCe8yjUTL1LtowC1dNrEEgqxmC1jkKga7o9Vx71PG8X-oqae-GwbMWhdE5DJp8MWkxqffa3t8M31gDTRm2Mam7QadkXpxRM8VFNZLWBhZEHTNQfwRsht1nm22cDChtDzmznlYTP21V2Fh3efylEPzzz9XTsC1dYLC7GEWvC1ayLDHov2vJVuhL7kkt7RS0DQ96WJT8fIWinLF6RMNIKxG2BUbH3tLK1hyhlXqtfti9m_Gf683aZa1MrOMzQNluM5W6Q1bVnmfniKk-A3dmgavg5pzGHxtfb7VJAdTA0RebuflGQi2SoBYo3OqjeWaPxLo7t7--26u4COy6xLHG91wu4-nXjGWBNnpoSGmn17nu3ok_7d7JLPuuaBj9j9NW6Xkoa8yizk8C2tdV_pzRUOuuw7M71pHFjxWo6G_ZxzY3FXldIjGDEQA
+	请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body style="height: 11.5cm; width: 14cm; margin: 0">
+    <div id="container" style="height: 100%"></div>
+
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+    <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+    <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+    <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+    <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+    <script type="text/javascript">
+      var dom = document.getElementById('container')
+      var myChart = echarts.init(dom, null, {
+        renderer: 'svg',
+        useDirtyRect: false
+      })
+      var app = {}
+
+      var option
+
+      const data = [
+        [[0.19, 0.4, '#08336E', '情节', '情节']],
+        [[0.18, 0.61, '#105CA4', '演员', '演员']],
+        [[0.14, 0.34, '#387EC0', '时间', '时间']],
+        [[0.12, 0.37, '#68ACD5', '镜头', '镜头']],
+        [[0.05, 0.7, '#AACFE5', '场景', '场景']],
+        [[0.03, 0.35, '#D2E3F3', '主线', '主线']],
+        [[0.02, 0.43, '#05F0F2', '切换', '切换']],
+        [[0.01, 0.86, '#BF98D7', '灯光', '灯光']],
+        [[0.1, 0.48, '#01C09E', '画面', '画面']]
+      ]
+      option = {
+        textStyle: {
+          fontFamily: '宋体',
+          fontSize: '12px'
+        },
+        toolbox: {
+          show: true,
+          feature: {
+            saveAsImage: {
+              show: true,
+              excludeComponents: ['toolbox'],
+              pixelRatio: 6
+            }
+          }
+        },
+        // backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [
+        //   {
+        //     offset: 0,
+        //     color: '#f7f8fa'
+        //   },
+        //   {
+        //     offset: 1,
+        //     color: '#cdd0d5'
+        //   }
+        // ]),
+        title: {
+          // text: 'Life Expectancy and GDP by Country',
+          left: '5%',
+          top: '3%'
+        },
+        legend: {
+          orient: 'vertical', // 'vertical'
+          right: '12%',
+          top: '22%',
+          data: ['情节', '演员', '时间', '镜头', '场景', '主线', '切换', '灯光', '画面'],
+          textStyle: {
+            // fontFamily: 'monospace'
+            color: '#000000'
+          }
+        },
+        grid: {
+          left: '11%',
+          top: '10%'
+        },
+        xAxis: {
+          name: '关注度',
+          // position: 'bottom',
+          nameLocation: 'center',
+          nameGap: 40,
+          max: 0.3,
+          nameTextStyle: {
+            // fontStyle: '宋体',
+            color: '#000000'
+          },
+          splitLine: {
+            lineStyle: {
+              type: 'dashed'
+            }
+          },
+          axisLine: {
+            lineStyle: {
+              color: '#000000'
+            }
+          }
+        },
+        yAxis: {
+          name: '满意度',
+          nameLocation: 'center',
+          nameGap: 30,
+          min: 0,
+          max: 1,
+          nameTextStyle: {
+            // fontStyle: '宋体',
+            color: '#000000'
+          },
+          splitLine: {
+            lineStyle: {
+              type: 'dashed'
+            }
+          },
+          axisLine: {
+            lineStyle: {
+              color: '#000000'
+            }
+          }
+        },
+        series: [
+          {
+            name: '情节',
+            data: data[0],
+            type: 'scatter',
+            symbolSize: function (data) {
+              return data[0] * 10 * 30
+            },
+            emphasis: {
+              focus: 'series',
+              label: {
+                show: true,
+                formatter: function (param) {
+                  return param.data[3]
+                },
+                position: 'top'
+              }
+            },
+            itemStyle: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(120, 36, 50, 0.5)',
+              shadowOffsetY: 5,
+              color: data[0][0][2]
+            }
+          },
+          {
+            name: '演员',
+            data: data[1],
+            type: 'scatter',
+            symbolSize: function (data) {
+              return data[0] * 10 * 30
+            },
+            emphasis: {
+              focus: 'series',
+              label: {
+                show: true,
+                formatter: function (param) {
+                  return param.data[3]
+                },
+                position: 'top'
+              }
+            },
+            itemStyle: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(25, 100, 150, 0.5)',
+              shadowOffsetY: 5,
+              color: data[1][0][2]
+            }
+          },
+          {
+            name: '时间',
+            data: data[2],
+            type: 'scatter',
+            symbolSize: function (data) {
+              return data[0] * 10 * 30
+            },
+            emphasis: {
+              focus: 'series',
+              label: {
+                show: true,
+                formatter: function (param) {
+                  return param.data[3]
+                },
+                position: 'top'
+              }
+            },
+            itemStyle: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(25, 100, 150, 0.5)',
+              shadowOffsetY: 5,
+              color: data[2][0][2]
+            }
+          },
+          {
+            name: '镜头',
+            data: data[3],
+            type: 'scatter',
+            symbolSize: function (data) {
+              return data[0] * 10 * 30
+            },
+            emphasis: {
+              focus: 'series',
+              label: {
+                show: true,
+                formatter: function (param) {
+                  return param.data[3]
+                },
+                position: 'top'
+              }
+            },
+            itemStyle: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(25, 100, 150, 0.5)',
+              shadowOffsetY: 5,
+              color: data[3][0][2]
+            }
+          },
+          {
+            name: '场景',
+            data: data[4],
+            type: 'scatter',
+            symbolSize: function (data) {
+              return data[0] * 10 * 30
+            },
+            emphasis: {
+              focus: 'series',
+              label: {
+                show: true,
+                formatter: function (param) {
+                  return param.data[3]
+                },
+                position: 'top'
+              }
+            },
+            itemStyle: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(120, 36, 50, 0.5)',
+              shadowOffsetY: 5,
+              color: data[4][0][2]
+            }
+          },
+          {
+            name: '主线',
+            data: data[5],
+            type: 'scatter',
+            symbolSize: function (data) {
+              return data[0] * 10 * 30
+            },
+            emphasis: {
+              focus: 'series',
+              label: {
+                show: true,
+                formatter: function (param) {
+                  return param.data[3]
+                },
+                position: 'top'
+              }
+            },
+            itemStyle: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(25, 100, 150, 0.5)',
+              shadowOffsetY: 5,
+              color: data[5][0][2]
+            }
+          },
+          {
+            name: '切换',
+            data: data[6],
+            type: 'scatter',
+            symbolSize: function (data) {
+              return data[0] * 10 * 30
+            },
+            emphasis: {
+              focus: 'series',
+              label: {
+                show: true,
+                formatter: function (param) {
+                  return param.data[3]
+                },
+                position: 'top'
+              }
+            },
+            itemStyle: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(25, 100, 150, 0.5)',
+              shadowOffsetY: 5,
+              color: data[6][0][2]
+            }
+          },
+          {
+            name: '灯光',
+            data: data[7],
+            type: 'scatter',
+            symbolSize: function (data) {
+              return data[0] * 10 * 30
+            },
+            emphasis: {
+              focus: 'series',
+              label: {
+                show: true,
+                formatter: function (param) {
+                  return param.data[3]
+                },
+                position: 'top'
+              }
+            },
+            itemStyle: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(25, 100, 150, 0.5)',
+              shadowOffsetY: 5,
+              color: data[7][0][2]
+            }
+          },
+          {
+            name: '画面',
+            data: data[8],
+            type: 'scatter',
+            symbolSize: function (data) {
+              return data[0] * 10 * 30
+            },
+            emphasis: {
+              focus: 'series',
+              label: {
+                show: true,
+                formatter: function (param) {
+                  return param.data[3]
+                },
+                position: 'top'
+              }
+            },
+            itemStyle: {
+              shadowBlur: 10,
+              shadowColor: 'rgba(25, 100, 150, 0.5)',
+              shadowOffsetY: 5,
+              color: data[8][0][2]
+            }
+          }
+        ]
+      }
+
+      if (option && typeof option === 'object') {
+        myChart.setOption(option)
+      }
+
+      window.addEventListener('resize', myChart.resize)
+    </script>
+  </body>
+</html>
